@@ -38,10 +38,7 @@ def predict():
 		return ('No model here to use')
     
 
-
-if __name__ == '__main__':
-    lr = joblib.load("model.pkl") 
-    model_columns = joblib.load("model_cols.pkl")
-    
-    app.run(debug=True)
+lr = joblib.load("model.pkl") 
+model_columns = joblib.load("model_cols.pkl")
+app.run(debug=True)
     
