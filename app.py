@@ -26,15 +26,15 @@ def predict():
 			query = query.reindex(columns=model_columns, fill_value=0)'''
 			temp=list(json[0].values())
 			vals=np.array(temp)
-			print(vals)
+			#print(vals)
 			prediction = lr.predict(temp)
-			print("here:",prediction)        
+			#print("here:",prediction)        
 			return jsonify({'prediction': str(prediction[0])})
 
 		except:        
 			return jsonify({'trace': traceback.format_exc()})
 	else:
-		print ('Train the model first')
+		#print ('Train the model first')
 		return ('No model here to use')
     
 
